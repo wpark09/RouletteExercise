@@ -10,6 +10,7 @@ namespace Roulette1
     {
         static void Main(string[] args)
         {
+            new App().Run();
         }
     }
 }
