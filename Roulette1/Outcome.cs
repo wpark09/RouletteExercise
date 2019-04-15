@@ -23,6 +23,5 @@ namespace Roulette1
             this.display = display;
             this.color = color;
         }
-
     }
 }

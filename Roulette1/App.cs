@@ -10,8 +10,10 @@ namespace Roulette1
         {
             bool quit = false;
             Outcome[] outcomes = new Outcome[38];
+            char[] colors = { 'R', 'B', 'G' };
+
             Random randomNumber = new Random();
-            
+
             for (int i = 0; i < outcomes.Length; ++i)
             {
                 var tempOutcome = new Outcome(i, i.ToString(), 0);
@@ -24,12 +26,12 @@ namespace Roulette1
                 Console.Clear();
                 Console.Write("Place your bet: ");
 
-                //To Do:  throw format exception.
+                //Game
+                var userBet = Console.ReadLine();
+                int result = RouletteOnAction(randomNumber);
+
                 //Test
                 //int result = int.Parse(Console.ReadLine());
-                //Game
-                Console.ReadLine();
-                int result = RouletteOnAction(randomNumber);
 
                 Console.WriteLine();
                 BlinkingLine("Wheel Spinning...");
